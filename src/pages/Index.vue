@@ -1,8 +1,8 @@
 <template>
   <section>
-    <button class="no-options-btn btn" @click="showToast">我传参的时候没有options</button>
-    <button class="options-btn btn" @click="showToast2">我传参的时候有options</button>
-    <button class="no-options-btn btn">我传参的时候没有options</button>
+    <button class="btn" @click="showToast">我在上面，3秒后消失,我成功了</button>
+    <button class="btn" @click="showToast2">我在下面，5秒后消失，我失败了</button>
+    <button class="btn" @click="showToast3">我是默认参数</button>
   </section>
 </template>
 
@@ -12,15 +12,22 @@ export default {
   methods: {
     showToast() {
       this.$toast({
-        message: 'hello',
-        duration: 2000,
+        message: '我在上面，3秒后消失',
+        duration: 3000,
+        position: 'top',
+        icon: 'sucess',
       });
     },
     showToast2() {
       this.$toast({
-        message: 'second',
-        duration: 2000,
+        message: '我在下面，5秒后消失',
+        duration: 5000,
+        position: 'bottom',
+        icon: 'error',
       });
+    },
+    showToast3() {
+      this.$toast();
     },
   },
 };
@@ -28,6 +35,7 @@ export default {
 
 <style scoped lang="postcss">
   .btn {
+    display: block;
     padding: .1rem .3rem;
     text-align: center;
     color: #fff;

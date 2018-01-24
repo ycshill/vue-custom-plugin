@@ -1,6 +1,16 @@
 # vue-custom-plugin
 
-> how to develop a custom plug-in based on vue
+> This is vue-custom-plugin which works only with Vue 2.0.
+
+### Introduction
+
+`vue-custom-plugin` is a simple toast plugin. It deeply integrates with Vue.js core to achieve information tips. Features include:
+
+- show message with icon
+- configure display time
+- configure palcements
+
+Get started with the [documentation](https://www.zybuluo.com/shilili1992/note/1027912) (see how to run them below).
 
 ## Build Setup
 

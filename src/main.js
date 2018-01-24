@@ -4,15 +4,18 @@ import Vue from 'vue';
 import App from './App';
 import router from './router';
 import './styles/common.css';
-import Toast from './components/toastSimple';
+// import Toast from './components/toastSimple';
+import Toast from './components/toastV1';
+// import Toast from './components/ComponentPlugin';
 
 Vue.config.productionTip = false;
 
 window.Vue = Vue;
 Vue.use(Toast);
 
+
 /* eslint-disable no-new */
-new Vue({
+window.vm = new Vue({
   el: '#app',
   router,
   components: { App },
