@@ -13,7 +13,6 @@ export default {
     showToast() {
       this.$toast({
         message: '我在上面，3秒后消失',
-        duration: 3000,
         position: 'top',
         icon: 'sucess',
       });
@@ -21,7 +20,6 @@ export default {
     showToast2() {
       this.$toast({
         message: '我在下面，5秒后消失',
-        duration: 5000,
         position: 'bottom',
         icon: 'error',
       });

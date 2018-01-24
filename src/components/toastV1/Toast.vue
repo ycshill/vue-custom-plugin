@@ -97,12 +97,12 @@ export default {
   }
   &.toast-top{
     .toast-con{
-      top:0;
+      top:.2rem;
     }
   }
   &.toast-bottom{
     .toast-con{
-      bottom: 0;
+      bottom: .2rem;
     }
   }
 }

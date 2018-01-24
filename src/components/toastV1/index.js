@@ -9,20 +9,20 @@ const Toast = {};
 
 // 避免重复 install ，设立flag；
 Toast.installed = false;
+// 默认参数
+Toast.config = {
+  message: '加载中...',
+  position: 'middle',
+  duration: 2000,
+  icon: '',
+};
 
 Toast.install = (Vue, options) => {
   if (Toast.installed) {
     return;
   }
-  // 设置默认的参数
-  let globalOpt = {
-    message: '加载中...',
-    position: 'middle',
-    duration: 2000,
-    icon: '',
-  };
 
-  globalOpt = Object.assign({}, globalOpt, options);
+  let globalOpt = Object.assign({}, Toast.config, options);
 
   // 1.生成一个vue的子类，同时这个子类就是组件
   const ToastConstructor = Vue.extend(ToastComponent);
@@ -55,6 +55,7 @@ Toast.install = (Vue, options) => {
 
 // Vue 作为全局变量，自动 install
 if (window.Vue) {
+  console.log('安装了！！！！');
   window.Vue.use(Toast);
 }
 

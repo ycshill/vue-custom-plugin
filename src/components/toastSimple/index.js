@@ -7,7 +7,11 @@ import ToastComponent from './Toast';
 
 //  声明
 export default {
-  install(Vue, options) {
+  /**
+   * 你好
+   * @param {any} Vue
+   */
+  install(Vue) {
     // 1.生成一个vue的子类，同时这个子类就是组件
     const ToastConstructor = Vue.extend(ToastComponent);
     // 2.生成该子类的一个实例
@@ -19,6 +23,7 @@ export default {
     // 4.通过Vue的原型注册一个方法，让所有的实例共享这个方法
     Vue.prototype.$toast = (args) => {
       ToastInstance.message = args.message;
+
       ToastInstance.isShow = true;
 
       setTimeout(() => {

@@ -5,13 +5,19 @@ import App from './App';
 import router from './router';
 import './styles/common.css';
 // import Toast from './components/toastSimple';
-import Toast from './components/toastV1';
+
+window.Vue = Vue;
+// eslint-disable-next-line
+require('./components/toastV1');
+// import Toast from ;
 // import Toast from './components/ComponentPlugin';
 
 Vue.config.productionTip = false;
 
-window.Vue = Vue;
-Vue.use(Toast);
+
+// Vue.use(Toast, {
+//   duration: 5000,
+// });
 
 
 /* eslint-disable no-new */
